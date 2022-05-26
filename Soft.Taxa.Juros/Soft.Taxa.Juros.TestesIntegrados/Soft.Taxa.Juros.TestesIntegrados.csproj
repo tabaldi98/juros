@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Soft.Taxa.Juros.Api\Soft.Taxa.Juros.Api.csproj" />
     <ProjectReference Include="..\Soft.Taxa.Juros\Soft.Taxa.Juros.Api.csproj" />
   </ItemGroup>
 

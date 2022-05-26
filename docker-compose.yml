@@ -1,0 +1,6 @@
+version: '3'
+services:
+  web-app-taxa-juros:
+    build: ./Soft.Taxa.Juros/
+    ports: 
+      - "8081:80"
