@@ -15,11 +15,16 @@ namespace Soft.Calculo.Juros.Domain.EntidadeJuros
             Meses = meses;
         }
 
-        public double CalcularJuros()
+        public decimal CalcularJuros()
         {
-            var taxaJuros = TaxaJuros + 1;
+            decimal valorFinal = ValorInicial;
 
-            return Math.Pow(decimal.ToDouble(ValorInicial * taxaJuros), Meses);
+            for (int i = 0; i < Meses; i++)
+            {
+                valorFinal *= TaxaJuros + 1;
+            }
+
+            return valorFinal;
         }
     }
 }
