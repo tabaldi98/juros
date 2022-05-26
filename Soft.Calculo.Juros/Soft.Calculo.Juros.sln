@@ -13,9 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Soft.Calculo.Juros.Domain",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Infra", "3. Infra", "{AE35AA18-55CC-48D9-99E8-92D3E5ADB35B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soft.Calculo.Juros.Infra.Data", "Soft.Calculo.Juros.Infra.Data\Soft.Calculo.Juros.Infra.Data.csproj", "{45A4EAD7-18AF-424D-BA66-EC7B60A73F4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Soft.Calculo.Juros.Infra.Data", "Soft.Calculo.Juros.Infra.Data\Soft.Calculo.Juros.Infra.Data.csproj", "{45A4EAD7-18AF-424D-BA66-EC7B60A73F4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soft.Calculo.Juros.Infra", "Soft.Calculo.Juros.Infra\Soft.Calculo.Juros.Infra.csproj", "{259A076B-80C4-4567-AA6D-785B2668916B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Soft.Calculo.Juros.Infra", "Soft.Calculo.Juros.Infra\Soft.Calculo.Juros.Infra.csproj", "{259A076B-80C4-4567-AA6D-785B2668916B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{182D2979-41B4-4CC3-A01B-557D2BEAF433}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soft.Calculo.Juros.TestesUnitarios", "Soft.Calculo.Juros.TestesUnitarios\Soft.Calculo.Juros.TestesUnitarios.csproj", "{6F1CF798-9588-4998-921C-34997EB8B7B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,10 @@ Global
 		{259A076B-80C4-4567-AA6D-785B2668916B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{259A076B-80C4-4567-AA6D-785B2668916B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{259A076B-80C4-4567-AA6D-785B2668916B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F1CF798-9588-4998-921C-34997EB8B7B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F1CF798-9588-4998-921C-34997EB8B7B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F1CF798-9588-4998-921C-34997EB8B7B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F1CF798-9588-4998-921C-34997EB8B7B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +56,7 @@ Global
 		{005217B3-65DF-4346-83F9-57790AAC70D4} = {62D204E3-D2F7-47B8-BCEE-7C8D76C685AC}
 		{45A4EAD7-18AF-424D-BA66-EC7B60A73F4E} = {AE35AA18-55CC-48D9-99E8-92D3E5ADB35B}
 		{259A076B-80C4-4567-AA6D-785B2668916B} = {AE35AA18-55CC-48D9-99E8-92D3E5ADB35B}
+		{6F1CF798-9588-4998-921C-34997EB8B7B0} = {182D2979-41B4-4CC3-A01B-557D2BEAF433}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8D1E7D01-88B0-4839-8778-EAB0CD8C63F4}
