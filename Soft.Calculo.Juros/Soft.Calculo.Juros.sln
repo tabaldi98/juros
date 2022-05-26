@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{182D2979
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soft.Calculo.Juros.TestesUnitarios", "Soft.Calculo.Juros.TestesUnitarios\Soft.Calculo.Juros.TestesUnitarios.csproj", "{6F1CF798-9588-4998-921C-34997EB8B7B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soft.Calculo.Juros.TestesIntegrados", "Soft.Calculo.Juros.TestesIntegrados\Soft.Calculo.Juros.TestesIntegrados.csproj", "{8FC49168-F63F-4966-A782-E7B7CE16F112}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{6F1CF798-9588-4998-921C-34997EB8B7B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F1CF798-9588-4998-921C-34997EB8B7B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F1CF798-9588-4998-921C-34997EB8B7B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FC49168-F63F-4966-A782-E7B7CE16F112}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FC49168-F63F-4966-A782-E7B7CE16F112}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FC49168-F63F-4966-A782-E7B7CE16F112}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FC49168-F63F-4966-A782-E7B7CE16F112}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +63,7 @@ Global
 		{45A4EAD7-18AF-424D-BA66-EC7B60A73F4E} = {AE35AA18-55CC-48D9-99E8-92D3E5ADB35B}
 		{259A076B-80C4-4567-AA6D-785B2668916B} = {AE35AA18-55CC-48D9-99E8-92D3E5ADB35B}
 		{6F1CF798-9588-4998-921C-34997EB8B7B0} = {182D2979-41B4-4CC3-A01B-557D2BEAF433}
+		{8FC49168-F63F-4966-A782-E7B7CE16F112} = {182D2979-41B4-4CC3-A01B-557D2BEAF433}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8D1E7D01-88B0-4839-8778-EAB0CD8C63F4}
