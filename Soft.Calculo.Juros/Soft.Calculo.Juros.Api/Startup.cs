@@ -1,34 +1,48 @@
+using FluentValidation.AspNetCore;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.OpenApi.Models;
+using Soft.Calculo.Juros.Domain.EntidadeJuros;
+using Soft.Calculo.Juros.Domain.EntidadeJuros.CalculaJuros;
+using Soft.Calculo.Juros.Infra;
+using Soft.Calculo.Juros.Infra.Data.EntidadeJuros;
+using Swashbuckle.AspNetCore.SwaggerUI;
 
 namespace Soft.Calculo.Juros.Api
 {
     public class Startup
     {
+        private readonly IConfiguration _configuration;
+
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            _configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllers()
+                .AddFluentValidation(p => p.RegisterValidatorsFromAssemblyContaining<CalculaJurosCommand>());
 
-            services.AddControllers();
+            services.AddSwaggerGen(config =>
+            {
+                config.SwaggerDoc("v1", new OpenApiInfo { Title = "Soft.Calculo.Juros.Api", Version = "v1" });
+            });
+
+            services.AddMediatR(typeof(CalculaJurosCommandHandler));
+
+            services.AddScoped<IJuroRepositorio, JuroRepositorio>();
+
+            services.AddHttpClient(Constantes.TAXA_JUROS_HTTP_CLIENT_NOME, config =>
+            {
+                config.BaseAddress = new System.Uri(_configuration[Constantes.TAXA_JUROS_HTTP_KEY]);
+            });
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -43,6 +57,14 @@ namespace Soft.Calculo.Juros.Api
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint($"/swagger/v1/swagger.json", "Soft.Calculo.Juros.Api");
+
+                c.DocExpansion(DocExpansion.List);
             });
         }
     }
