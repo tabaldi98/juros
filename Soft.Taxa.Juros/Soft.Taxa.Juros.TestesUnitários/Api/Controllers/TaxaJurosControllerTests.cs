@@ -8,7 +8,7 @@ using Soft.Taxa.Juros.Domain.TaxaJuro;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Soft.Taxa.Juros.TestesUnitários.Api.Controllers
+namespace Soft.Taxa.Juros.TestesUnitarios.Api.Controllers
 {
     [TestFixture]
     public class TaxaJurosControllerTests

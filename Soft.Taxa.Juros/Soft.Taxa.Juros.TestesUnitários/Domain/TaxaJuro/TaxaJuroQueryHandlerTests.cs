@@ -7,7 +7,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Soft.Taxa.Juros.TestesUnitários.Domain.TaxaJuro
+namespace Soft.Taxa.Juros.TestesUnitarios.Domain.TaxaJuro
 {
     [TestFixture]
     public class TaxaJuroQueryHandlerTests
@@ -24,7 +24,7 @@ namespace Soft.Taxa.Juros.TestesUnitários.Domain.TaxaJuro
         public async Task Deve_RetornarTaxaDeJuro_Quando_BuscarTaxaDeJuros()
         {
             // Arrange
-            decimal taxaJuros = 0.01M;
+            var taxaJuros = 0.01M;
 
             _mockConfiguration
                 .Setup(p => p["TaxaDeJuros"])
