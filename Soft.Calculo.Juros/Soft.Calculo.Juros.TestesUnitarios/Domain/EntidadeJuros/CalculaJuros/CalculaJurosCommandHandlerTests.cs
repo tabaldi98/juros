@@ -4,9 +4,6 @@ using NUnit.Framework;
 using Soft.Calculo.Juros.Domain.EntidadeJuros;
 using Soft.Calculo.Juros.Domain.EntidadeJuros.CalculaJuros;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
