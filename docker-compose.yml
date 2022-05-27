@@ -1,6 +1,14 @@
-version: '3'
+version: '3.9'
+
 services:
   web-app-taxa-juros:
     build: ./Soft.Taxa.Juros/
     ports: 
       - "8081:80"
+
+  web-app-calcula-juros:
+    build: ./Soft.Calculo.Juros/
+    ports: 
+      - "8082:80"
+    depends_on:
+      - web-app-taxa-juros
